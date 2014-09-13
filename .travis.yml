@@ -1,11 +1,18 @@
 language: ruby
 rvm:
-  - 2.1.0
-  - jruby-18mode
-  - jruby-19mode
-  - rbx-2
-  - ruby-head
-  - jruby-head
-  - ree
+  - 1.9.3
   
+install: gem install rails
+before_install:
+  - mysql -e "create database IF NOT EXISTS test;" -uroot
   
+services:
+  - redis-server
+script:
+  - bundle exec rake build
+  - bundle exec rake "shopqi:bootstrap[mysql]"
+deploy:
+  provider: openshift
+  user: "dwiputra173@gmail.com"
+  password: "19091996" # can be encrypted
+  domain: "shopify-tarmimi.rhcloud.com"
