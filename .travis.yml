@@ -11,7 +11,7 @@ services:
 script:
   - bundle install
   - bundle exec rake shopqi:bootstrap
-  - travis setup openshift
+$ travis setup openshift
 OpenShift user: dwiputra173@gmail.com
 OpenShift password: 19091996
 OpenShift application name: |shopify|
