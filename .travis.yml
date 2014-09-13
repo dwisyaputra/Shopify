@@ -11,8 +11,10 @@ services:
 script:
   - bundle install
   - bundle exec rake shopqi:bootstrap
-deploy:
-  provider: openshift
-  user: "dwiputra173@gmail.com"
-  password: "19091996" # can be encrypted
-  domain: "shopify-tarmimi.rhcloud.com"
+  - travis setup openshift
+OpenShift user: dwiputra173@gmail.com
+OpenShift password: 19091996
+OpenShift application name: |shopify|
+OpenShift domain: http://shopify-tarmimi.rhcloud.com/
+Deploy only from <dwiputra173@gmail.com>/myapp? |yes| 
+Encrypt password? |yes| 
