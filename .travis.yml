@@ -9,7 +9,7 @@ before_install:
 services:
   - redis-server
 script:
-  - bundle exec rake build
+  - bundle install
   - bundle exec rake "shopqi:bootstrap[mysql]"
 deploy:
   provider: openshift
