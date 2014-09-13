@@ -10,7 +10,7 @@ services:
   - redis-server
 script:
   - bundle install
-  - bundle exec rake rake shopqi:bootstrap
+  - bundle exec rake shopqi:bootstrap
 deploy:
   provider: openshift
   user: "dwiputra173@gmail.com"
