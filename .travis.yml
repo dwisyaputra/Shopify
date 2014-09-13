@@ -16,5 +16,5 @@ OpenShift user: dwiputra173@gmail.com
 OpenShift password: 19091996
 OpenShift application name: |shopify|
 OpenShift domain: http://shopify-tarmimi.rhcloud.com/
-Deploy only from <dwiputra173@gmail.com>/myapp? |yes| 
+Deploy only from <dwiputra173@gmail.com>/shopify? |yes| 
 Encrypt password? |yes| 
