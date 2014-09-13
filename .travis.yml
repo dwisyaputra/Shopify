@@ -3,14 +3,14 @@ rvm:
   - 1.9.3
   
 install: gem install rails
-before_install:
-  - mysql -e "create database IF NOT EXISTS test;" -uroot
+addons:
+  postgresql: "9.2"
   
 services:
   - redis-server
 script:
   - bundle install
-  - bundle exec rake "shopqi:bootstrap[mysql]"
+  - bundle exec rake rake shopqi:bootstrap
 deploy:
   provider: openshift
   user: "dwiputra173@gmail.com"
